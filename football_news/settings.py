@@ -33,6 +33,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "muhammad-naufal419-footballnews.pbp.cs.ui.ac.id"]
 
+# PWS  Entry URL Project
+CSRF_TRUSTED_ORIGINS = [
+    "https://muhammad-naufal419-footballnews.pbp.cs.ui.ac.id"
+]
+
 
 # Application definition
 
@@ -61,7 +66,7 @@ ROOT_URLCONF = 'football_news.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
